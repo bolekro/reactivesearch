@@ -23,7 +23,7 @@ class List extends Component {
 			renderItem={({ item }) => this.props.onData(item)}
 			onEndReachedThreshold={0.5}
 			onEndReached={this.props.onEndReached}
-			{...getInnerKey(this.props.innerProps, 'flatList')}
+// 			{...getInnerKey(this.props.innerProps, 'flatList')}
 		/>);
 	}
 }
