@@ -409,7 +409,9 @@ class ReactiveList extends Component {
 		const results = parseHits(this.props.hits) || [];
 		const streamResults = parseHits(this.props.streamHits) || [];
 		let filteredResults = results;
-
+		if(this.props.onHits && this.props.hits){
+			this.props.onHits(this.props.hits.length)
+		}
 		if (streamResults.length) {
 			const ids = streamResults.map(item => item._id);
 			filteredResults = filteredResults.filter(item => !ids.includes(item._id));
